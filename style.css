@@ -1,0 +1,30 @@
+div {
+	height: 200px;
+}
+h1{
+	transition-property: width;
+    transition-duration: 1s;
+    position: fixed;
+    top: 10px;
+    width: 168px;
+    height: 50px;
+    background: #f00;
+    white-space: nowrap; 
+    overflow: hidden;
+    text-overflow: ellipsis;
+    
+
+}
+h1:hover {
+	transition-property: width;
+    transition-duration: 1s;
+    position: fixed;
+    top: 10px;
+    width: 500px;
+    height: 50px;
+    background: #f08;
+    transition: 3s;
+    white-space: nowrap; 
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
