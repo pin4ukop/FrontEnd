@@ -1,0 +1,37 @@
+
+#form{
+}
+    background: #FFFFEE;
+}
+.text1{
+    text-align: left;
+}
+.text2{
+    text-align: right;
+}
+.text3{
+    text-align: center;
+
+}
+.text4{
+    text-align: justify;
+
+}
+.ol1{
+    font-style: normal;
+}
+.ol2{
+    font-style: italic;
+}
+.ol3{
+    font-style: oblique;
+}
+.ol{
+    position: relative;
+    height: 200px;
+}
+ol{
+    position: absolute;
+    bottom: 0px;
+    left: 0px;
+}
