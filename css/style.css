@@ -7,6 +7,7 @@ body{
     font-family: Arial,Helvetica Neue,Helvetica,sans-serif;
     font-size: 12px;
     font-style: normal;
+    background: #ebebeb;
 }
 a{
     text-decoration: none;
@@ -107,9 +108,6 @@ nav{
 
 
 /*content*/
-section{
-    background: #ebebeb;
-}
 /*********************************************section1*/
 .search{
     height: 70px;
