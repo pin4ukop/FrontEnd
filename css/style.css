@@ -34,10 +34,6 @@ hr{
     color: #000000;
     width: 273px;
 }
-/*img{*/
-    /*width: 100%;*/
-    /*height: 100%;*/
-/*}*/
 .conteiner{
     width: 942px;
     margin: auto;
@@ -136,13 +132,17 @@ section{
     font-weight: bold;
     color: #959595;
 }
+form{
+    position: relative;
+}
 .icon{
     position: absolute;
-    padding-left: 260px;
-    top: 157px;
+    right: 353px;
+    top: 6px;
     font-size: 30px;
     color: #f26c4f;
 }
+
 .ss{
     width: 32%;
     display: flex;
@@ -264,21 +264,27 @@ section{
     border-color: transparent #f26c4f transparent transparent;
     padding-left: 70%;
 }
+
 #im1{
-    background-image: url(img/Layer-6.jpg);
+    background-image: url(../img/Layer-6.jpg);
     background-position: bottom;
 }
 #im2{
-    background-image: url(img/Layer-8.jpg);
+    background-image: url(../img/Layer-8.jpg);
     background-position: bottom;
 }
 #im3{
-    background-image: url(img/Layer-7.jpg);
+    background-image: url(../img/Layer-7.jpg);
     background-position: bottom;
 }
 .triangle3>span{
  display: block;
+    padding-top: 21px;
+    padding-left: 56px;
+    color: #ffffff;
+    font-size: 20px;
 }
+
 /*.img2{*/
     /*<img src="img/Layer-8.jpg" alt="">*/
 /*}*/
@@ -309,8 +315,8 @@ section{
 }
 .img-block3{
     height: 295px;
-    background-image: url(img/Layer-9.jpg);
-    background-position: bottom;
+    background-image: url(../img/Layer-9.jpg);
+    background-position: right;
 }
 .house{
     width: 300px;
@@ -364,16 +370,7 @@ section{
     margin-bottom: 12px;
     border-left: 4px solid #ce4e32;
 }
-/*.good:hover*/
-/*{*/
-    /*background-image: url(img/movie-tape.png);*/
-    /*background-position: bottom;*/
-    /*position: absolute;*/
-    /*display: block;*/
-    /*width: 33px;*/
-    /*height: 25px;*/
-    /*transform: translate(-130%, 300%);*/
-/*}*/
+
 .good2{
     height: 173px;
     margin-bottom: 10px;
@@ -392,13 +389,56 @@ section{
 .all-content{
     background: #ffffff;
     width: 621px;
+    transition: 1s;
+    position: relative;
+
+}
+.all-content:hover{
+    background: #f26c4f;
+    color: #ffffff;
+}
+.all-content:hover .mover{
+    display: block;
+}
+.mover{
+    background-image: url(../img/movie-tape.png);
+    background-position: bottom;
+    display: none;
+    width: 33px;
+    height: 25px;
+    transform: translate(-130%, 289%);
+    position: absolute;
+}
+.all-content:hover .mover2{
+    display: block;
+}
+.mover2{
+    background-image: url(../img/movie-tape.png);
+    background-position: bottom;
+    display: none;
+    width: 33px;
+    height: 25px;
+    transform: translate(-130%, 149%);
+    position: absolute;
+}
+.all-content:hover .mover3{
+    display: block;
+}
+.mover3{
+    background-image: url(../img/movie-tape.png);
+    background-position: bottom;
+    display: none;
+    width: 33px;
+    height: 25px;
+    transform: translate(-130%, 100%);
+    position: absolute;
 }
 .text-h{
     font-size: 24px;
     font-weight: bold;
-    color: #474747;
     padding: 30px 35px 5px 35px;
 }
+
 .text-p{
     padding-left: 40px;
     padding-right: 50px;
@@ -420,10 +460,8 @@ section{
 .comm{
     padding-top: 2px;
 }
-.all-content:hover{
-    background: #f26c4f;
-    color: #ffffff !important;
-}
+
+
 .line{
     float: none;
     list-style: none;
@@ -443,14 +481,6 @@ section{
     color: #474747;
     padding: 14px 35px 5px 35px;
 }
-
-
-
-
-
-
-
-
 
 
 
@@ -504,9 +534,14 @@ section{
 .counter{
     color: #f26c4f;
     padding-right: 25px;
+    display: flex;
+
+}
+.fa{
+    padding-top: 5px;
 }
 .kol{
-    padding-left: 5px;
+    padding-right: 10px !important;
     color: #a2a2a2;
 }
 
@@ -542,7 +577,7 @@ section{
 .img-block1 {
     width: 621px;
     height: 305px;
-    background-image: url(img/Layer-13.jpg);
+    background-image: url(../img/Layer-13.jpg);
     background-position: bottom;
 }
 .block1 h2{
