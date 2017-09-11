@@ -1,0 +1,161 @@
+/* Media Queries */
+
+@media only screen and (max-width: 768px) {
+    .menu {
+        display: none;
+    }
+    .navigation{
+        display: block;
+    }
+
+    .wrapper{
+        width: 90%;
+    }
+
+    .logo{
+        justify-content: center;
+        width: 100%;
+        display: flex;
+        padding: 20px 0;
+    }
+    .header-banner {
+        background-size: 100% 100%;
+
+    }
+    .banner-text h1{
+
+        text-align: center;
+        font-size: 23px;
+        padding: 20px;
+
+    }
+    .header-banner p{
+        text-align: center;
+        font-size: 15px;
+        padding: 20px;
+    }
+    .banner-text button{
+        margin-top: 0;
+        margin-bottom: 30px;
+    }
+    button{
+        height: 35px;
+    }
+    section{
+        flex-wrap: wrap;
+        margin: auto;
+        width: 89%;
+    }
+    .block-content{
+        width: 34%;
+        padding: 60px 30px 0 30px;
+    }
+    hr{
+        margin-top: 75px;
+        margin-right: 45px;
+        margin-left: 45px;
+    }
+    .section-text{
+        text-align: center;
+    }
+    .info-content{
+        width: 50%;
+        padding: 30px 0 60px 150px;
+    }
+    .block-end p{
+        font-size: 20px;
+        padding: 30px 45px 65px 45px;
+        margin: 0 80px;
+    }
+    .footer-menu{
+        flex-direction: column;
+        width: 100%;
+        padding-left: 80px;
+    }
+    .col{
+        width: 70%;
+        padding: 0 45px;
+    }
+    .copyright{
+        padding: 0 45px 50px 45px;
+    }
+
+
+}
+@media only screen and (max-width: 320px) {
+    .menu {
+        display: none;
+    }
+    .wrapper{
+        width: 100%;
+    }
+
+    .logo{
+        justify-content: center;
+        width: 100%;
+        display: flex;
+        padding: 20px 0;
+    }
+    .header-banner {
+        background-size: 100% 100%;
+
+    }
+    .banner-text h1{
+
+        text-align: center;
+        font-size: 23px;
+        padding: 20px 0;
+
+    }
+    .header-banner p{
+        display: none;
+    }
+    .banner-text button{
+        margin-top: 0;
+        margin-bottom: 30px;
+    }
+    button{
+        height: 35px;
+    }
+    section{
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+    }
+    .block-content{
+        width: 100%;
+        padding: 70px 0 0 0;
+    }
+    .block-content p{
+        padding: 0 40px;
+    }
+    hr{
+        margin: 70px 40px 0 40px;
+    }
+    .section-text{
+        text-align: center;
+    }
+    .info-content{
+        width: 75%;
+        padding: 30px 40px 60px 40px;
+    }
+    .block-end p{
+        font-size: 14px;
+        padding: 30px 0 65px 0;
+        margin: 0 40px;
+    }
+    .block-end img{
+        width:10%;
+    }
+    .footer-menu{
+        padding-left: 0;
+    }
+    .col{
+        width: 70%;
+        padding: 0 45px;
+    }
+    .copyright{
+        padding: 0 45px 50px 45px;
+    }
+
+}
