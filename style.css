@@ -1,0 +1,8 @@
+img{
+    position: absolute;
+    top:-200px;
+    width: 75vw;
+    height: auto;
+    display: flex;
+    left: 12%;
+}
