@@ -87,12 +87,13 @@ function close() {
         f1.style.display = "flex";
         err.style.display = "none";
         f1.style.display = ""
+        //pin.focus()
     })
 }
 
 close();
 
-// проверка пароля кнопка ОК для form1
+//проверка пароля кнопка ОК для form1
 function objectUser() {
     for (var j = 0; j < arrObj.length; j++)
         if (+pin.value === arrObj[j].pincod) {
@@ -122,15 +123,70 @@ var str = "";
 var f1 = document.querySelector(".forms");
 var f2 = document.querySelector(".forms2");
 var err = document.querySelector("#err");
+
+
+//***********************************************************************Задание ввода кнопок с клавиатуры
+// input > number
+document.onkeypress = function (e) {
+    // console.log(e)
+    // console.log(e.keyCode)
+    // console.log(String.fromCharCode(e.charCode));
+    if (f1.style.display == "") {
+        pin.focus();
+        if (e.keyCode < 48 || e.keyCode > 57 && e.keyCode != 44) {
+            return false;
+        }
+    } else if (f2.style.display == "flex") {
+
+        if (e.keyCode < 48 || e.keyCode > 57 && e.keyCode != 44) {
+            return false;
+        }
+    }
+}
+// Enter (Ok)
+addEventListener("keypress", function (e) {
+    if (f1.style.display == "") {
+        if (e.keyCode == 13) {
+            objectUser();
+        }
+    } else if (f2.style.display == "flex"){
+        if (e.keyCode == 13) {
+            balans();
+            sum.value = '';
+        }
+    }
+});
+// Del (del)
+addEventListener("keypress", function (e) {
+    if (f1.style.display == "") {
+        if (e.keyCode == 44 || e.keyCode == 46) {
+            console.log(e.keyCode);
+            pin.value = '';
+            err.style.display = "none";
+        }
+    } else if (f2.style.display == "flex") {
+
+        if (e.keyCode == 44 || e.keyCode == 46) {
+            console.log(e.keyCode);
+            sum.value = '';
+            err.style.display = "none";
+        }
+    }
+});
+//**************************************************************************** ввод кнопок с клав КОНЕЦ
+
+// код ввода мышкой по кнопкам
 for (var i = 0; i < buttons.length; i++) {
     addEvent(buttons[i]);
 }
+
 function addEvent(button) {
     button.addEventListener('click', event);
 
     function event() {
         var type = button.getAttribute('data-type')
         if (f1.style.display == "") {
+            pin.focus()
             if (type === 'ok') {
                 objectUser();
             } else if (type === 'del') {
@@ -156,6 +212,45 @@ function addEvent(button) {
         }
     }
 }
+
+
+//
+//
+// // код ввода мышкой по кнопкам
+// for (var i = 0; i < buttons.length; i++) {
+//     addEvent(buttons[i]);
+// }
+// function addEvent(button) {
+//     button.addEventListener('click', event);
+//     function event() {
+//         var type = button.getAttribute('data-type')
+//         if (f1.style.display == "") {
+//             pin.focus()
+//             if (type === 'ok') {
+//                 objectUser();
+//             } else if (type === 'del') {
+//                 str = '';
+//                 err.style.display = "none";
+//             } else {
+//                 str += type;
+//             }
+//             pin.value = str;
+//         } else if (f2.style.display == "flex") {
+//             if (type === 'ok') {
+//                 balans();
+//                 sum.value = '';
+//                 str = "";
+//             } else if (type === 'del') {
+//                 str = '';
+//                 err.style.display = "none";
+//             } else {
+//                 str += type;
+//             }
+//             sum.value = str;
+//             console.log(pin.value)
+//         }
+//     }
+// }
 // date, time
 function showTime() {
     var ld = new Date();
@@ -163,7 +258,9 @@ function showTime() {
     var t = ld.toLocaleTimeString();
     var out = t + ", " + d;
     return out;
-} showTime();
+}
+
+showTime();
 
 // balans, transaction
 function balans() {
